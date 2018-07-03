@@ -29,7 +29,7 @@
 <header>
 
 	<!--Navbar-->
-	<nav class="navbar navbar-expand-lg navbar-dark indigo fixed-top scrolling-navbar">
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
 
 		<!-- Navbar brand -->
 		<!--<a class="navbar-brand" href="#">GeraldWu.com</a>-->
@@ -44,10 +44,9 @@
 		<div class="collapse navbar-collapse" id="mainNav">
 
 			<!-- Links -->
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto smooth-scroll">
 				<li class="nav-item active">
 				<a class="nav-link" href="#">Home
-					<span class="sr-only">(current)</span>
 				</a>
 				</li>
 				<li class="nav-item">
@@ -120,7 +119,7 @@
 
 			<div class="row d-flex justify-content-center mb-4">
 				<div class="col-md-8">
-					<p class="grey-text">Here's a little bit about me</p>
+					<p class="subtitle grey-text">Here's a little bit about me</p>
 				</div>
 			</div>
 
@@ -129,20 +128,20 @@
 					<i class="fa fa-code fa-4x indigo-text"></i>
 					<h4 class="mt-4 font-weight-bold">Software Development</h4>
 					<h6 class="mb-4 grey-text">Scala, Java, C++</h6>
-					<p style="text-align:left;">I'm a developer primarily focused in both Object-Oriented and Functional programming. I'm most familiar with the Scala, Java, and C++ languages. I also have done projects in pure C, Python, Processing, and other assorted languages.</p>
+					<p>I'm a developer primarily focused in both Object-Oriented and Functional programming. I'm most familiar with the Scala, Java, and C++ languages. I also have done projects in pure C, Python, Processing, and other assorted languages.</p>
 				</div>
 				<div class="col-md-4 mb-1">
 					<i class="fa fa-html5 fa-4x indigo-text"></i>
 					<h4 class="mt-4 font-weight-bold">Web Development</h4>
 					<h6 class="mb-4 grey-text">Linux/Apache/MySQL/PHP Stack</h6>
-					<p style="text-align:left;">On the web development side, I'm most familiar with the LAMP stack.<br>
+					<p>On the web development side, I'm most familiar with the LAMP stack.<br>
 					In fact, this website is self-hosted on a LAMP stack running on a headless minimal CentOS7 VPS, entirely configured from scratch.</p>
 				</div>
 				<div class="col-md-4 mb-1">
 					<i class="fa fa-desktop fa-4x indigo-text"></i>
 					<h4 class="mt-4 font-weight-bold">Information Technology</h4>
 					<h6 class="mb-4 grey-text">Red Hat Enterprise Linux 7</h6>
-					<p style="text-align:left;"> I'm primarily a Linux systems administrator, specializing in Red Hat Enterprise Linux 7.<br>
+					<p>I'm primarily a Linux systems administrator, specializing in Red Hat Enterprise Linux 7.<br>
 					I currently have my RHCSA certification, and am working on getting my RHCE and CCNA.
 					</p>
 				</div>
@@ -185,6 +184,21 @@
 
 <script type="text/javascript">
 	$(".view .mask").removeClass("waves-effect waves-light");
+
+	$(document).ready(function () {
+			$('a[href^="#"]').on('click', function (e) {
+				e.preventDefault();
+
+				var target = this.hash,
+				$target = $(target);
+
+				$('html, body').stop().animate({
+					'scrollTop': $target.offset().top - 80
+					}, 900, 'swing', function () {
+					window.location.hash = target;
+					});
+				});
+			});
 </script>
 
 </body>
