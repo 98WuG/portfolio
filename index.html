@@ -14,9 +14,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
 
 <!-- Cerebral CSS -->
 <link rel="stylesheet" href="css/style.css">
@@ -46,7 +46,7 @@
 			<!-- Links -->
 			<ul class="navbar-nav mr-auto smooth-scroll">
 				<li class="nav-item active">
-				<a class="nav-link" href="#">Home
+				<a class="nav-link" href="#intro">Home
 				</a>
 				</li>
 				<li class="nav-item">
@@ -93,7 +93,7 @@
 						<!-- Description -->
 						<h4 class="white-text">Software Development / IT</h4>
 						<h6 class="white-text mb-4">Scala, Java, C++, Webdev / RHEL7</h6>
-						<button type="button" class="btn btn-outline-white">Read more</button>
+						<button type="button" class="btn btn-outline-white readmore" href="#about">About Me</button>
 
 					</div>
 
@@ -135,7 +135,7 @@
 					<h4 class="mt-4 font-weight-bold">Web Development</h4>
 					<h6 class="mb-4 grey-text">Linux/Apache/MySQL/PHP Stack</h6>
 					<p>On the web development side, I'm most familiar with the LAMP stack.<br>
-					In fact, this website is self-hosted on a LAMP stack running on a headless minimal CentOS7 VPS, entirely configured from scratch.</p>
+					In fact, this website is self-hosted on a LAMP stack, running on a headless minimal CentOS7 VPS, entirely configured from scratch.</p>
 				</div>
 				<div class="col-md-4 mb-1">
 					<i class="fa fa-desktop fa-4x indigo-text"></i>
@@ -152,12 +152,14 @@
 		<hr class="my-5">
 
 		<section id="projects">
+			whomst
 
 		</section>
 
 		<hr class="my-5">
 
 		<section id="contact">
+			whomst
 
 		</section>
 
@@ -170,20 +172,27 @@
 </footer>
 <!--Footer-->
 
-
-
 <!-- SCRIPTS -->
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+
+
 
 <script type="text/javascript">
 	$(".view .mask").removeClass("waves-effect waves-light");
+
+	$('.readmore').click(function() {
+		var sectionTo = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(sectionTo).offset().top - 100
+			}, 900, 'swing');
+	});
 
 	$(document).ready(function () {
 			$('a[href^="#"]').on('click', function (e) {
@@ -193,12 +202,20 @@
 				$target = $(target);
 
 				$('html, body').stop().animate({
-					'scrollTop': $target.offset().top - 80
+					'scrollTop': $target.offset().top - 100
 					}, 900, 'swing', function () {
-					window.location.hash = target;
 					});
 				});
 			});
+
+$('.navbar-nav li').click(function(e) {
+		var $this = $(this);
+		$('.navbar-nav li').removeClass('active');
+		if (!$this.hasClass('active')) {
+			$this.addClass('active');
+		}
+		e.preventDefault();
+		});
 </script>
 
 </body>
