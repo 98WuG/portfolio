@@ -29,15 +29,21 @@ header,
 
 #about,
 #projects {
-	.list {
+	.description {
 		p {
 			text-align: left;
-			margin-top: 20px;
-			margin-bottom: 20px;
 
 			br {
 				margin-bottom: 5px;
 			}
+		}
+	}
+
+	.list {
+		@extend .description;
+		p {
+			margin-top: 20px;
+			margin-bottom: 20px;
 		}
 	}
 
