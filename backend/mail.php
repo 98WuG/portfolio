@@ -56,11 +56,11 @@ function sendEmail($myemail, $name, $email, $subject, $message)
 {
 	// Email data
 	$to			= $myemail;
-	$subject2	= "Contact form on " . time() . ": " . $subject . " from " . $email;
+	$subject2	= "Contact form on " . date("Y/m/d h:i:sa") . ": " . $subject . " from " . $email;
 	$message	= "Name: ". $name . "<br>" .
 		"Email: " . $email . "<br>" .
-		"Subject: " . $subject . "<br>" .
-		"Message: " . $message . "<br>";
+		"Subject: " . $subject . "<br><br>" .
+		"Message: " . $message;
 	$headers	= "From: form@geraldwu.com" . "\r\n" .
 		"MIME-Version: 1.0\r\n" .
 		"Content-Type: text/html; charset=ISO-8859-1\r\n" .
