@@ -1,3 +1,10 @@
+<?php
+
+$ini_array = parse_ini_file("backend/config.ini");
+$publickey = $ini_array["publickey"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,6 +83,7 @@
 				<li class="nav-items ml-2 social">
 					<a href="https://linkedin.com/in/98wug/" target="_blank" class="nav-link white-text"><i class="fa fa-linkedin"></i></a>
 				</li>
+			</ul>
 		</div>
 		<!-- Collapsible content -->
 
@@ -206,6 +214,7 @@
 					<h6 class="grey-text">PHP / JQuery</h6>
 					<p class="grey-text">An implementation of Authorize.Net's API in PHP that allows merchants to store payment methods without any sensitive information hitting the merchant's database, thereby exempting them from tedious PCI compliance. These may also be charged at a later date. Responsive front-end design with mdbootstrap and flexible backend written in PHP.
 				</div>
+			</div>
 		</section>
 
 		<hr class="my-5">
@@ -240,7 +249,7 @@
 						<label for="form8">Your message</label>
 					</div>
 					<center>
-						<div class="g-recaptcha" data-sitekey="6LedWWIUAAAAAL4IgmBgPEfivTsjvz3HkdLJh9hM"></div>
+						<div class="g-recaptcha" data-sitekey="<?php echo $publickey ?>"></div>
 					</center>
 					<div class="text-center mt-2">
 						<button type="submit" class="btn btn-primary" id="send-button">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
@@ -251,6 +260,7 @@
 			<!--Grid column-->
 
 		</section>
+	</div>
 
 </main>
 <!--Main layout-->
