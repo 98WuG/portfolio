@@ -156,7 +156,7 @@
 
 		<section id="projects" class="text-center">
 
-			<h2 class="mb-2 font-weight-bold">Projects</h2>
+			<h2 class="mb-2 font-weight-bold">My Projects</h2>
 
 			<div class="row d-flex justify-content-center mb-3">
 				<div class="col-md-8">
@@ -173,8 +173,9 @@
 						<div class="mask rgba-black-light"></div>
 					</div>
 
-					<h4 class="my-4 font-weight-bold">Quantum Mechanical Wave Function Propagation</h4>
-					<p class="grey-text">A program to evolve arbitrary initial states through time for the one-dimensional Schrodinger Equation and Wave Equation in the absence of a potential field. Highly optimized to run in <b>real time</b>. No pre-rendering. Written in Processing, with a small shell script launcher.
+					<h4 class="mt-4 font-weight-bold">Quantum Mechanical Wave Function Propagation</h4>
+					<h6 class="subtitle grey-text">Processing</h6>
+					<p class="grey-text">A program to evolve arbitrary initial states through time for the one-dimensional Schrodinger Equation and Wave Equation in the absence of a potential field. Highly optimized to run in <b>real time</b>. No pre-rendering. Accurate to millions of timesteps before runaway error propagation. Written in Processing (a fork of Java with a focus on real-time graphing), with a small shell script launcher.
 				</div>
 
 				<div class="col-lg-4 col-md-6 mb-4">
@@ -185,36 +186,57 @@
 						<div class="mask rgba-black-light"></div>
 					</div>
 
-					<h4 class="my-4 font-weight-bold">An Approximate Solution to the Bin Packing Problem</h4>
-					<p class="grey-text">This program provides an approximate, polynomial time solution to the classic NP-hard bin packing problem. Includes a detailed report showcasing results (typeset in LaTeX). Writte in C++, with a shell script helper for initalization and final visualization.
+					<h4 class="mt-4 font-weight-bold">An Approximate Solution to the Packing Problem</h4>
+					<h6 class="subtitle grey-text">C++ / Shell</h6>
+					<p class="grey-text">This program provides an approximate, polynomial time solution to the classic NP-hard packing problem. Implemented using the sorting-first greedy approach to packing. Includes a detailed report showcasing results (typeset in LaTeX). Writte in C++, with a shell script helper for initalization and final visualization.
 				</div>
 
 				<div class="col-lg-4 col-md-6 mb-4">
-				</div>
+					<div class="view-overlay z-depth-1-half">
+						<a href="https://github.com/98WuG/Authorize.Net-Web">
+							<img src="./images/payment.jpg" class="img-fluid" alt="">
+						</a>
+						<div class="mask rgba-black-light"></div>
+					</div>
 
-				<div class="col-lg-4 col-md-6 mb-4">
+					<h4 class="mt-4 font-weight-bold">PHP Implementation of Authorize.Net Payments</h4>
+					<h6 class="subtitle grey-text">PHP / JQuery</h6>
+					<p class="grey-text">An implementation of Authorize.Net's API in PHP that allows merchants to store payment methods without any sensitive information hitting the merchant's database, thereby exempting them from tedious PCI compliance. These may also be charged at a later date. Responsive front-end design with mdbootstrap and flexible backend written in PHP.
 				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4 col-md-12 mb-4">
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-				</div>
-			</div>
 		</section>
 
 		<hr class="my-5">
 
 		<section id="contact">
-			whomst
+			<h2 class="font-weight-bold text-center">Contact Me</h2>
+
+			<!--Grid column-->
+			<div class="col-lg-5 col-md-12">
+				<!-- Form contact -->
+				<form class="p-5">
+					<div class="md-form form-sm"> <i class="fa fa-user prefix grey-text"></i>
+						<input type="text" id="form3" class="form-control form-control-sm">
+						<label for="form3">Your name</label>
+					</div>
+					<div class="md-form form-sm"> <i class="fa fa-envelope prefix grey-text"></i>
+						<input type="text" id="form2" class="form-control form-control-sm">
+						<label for="form2">Your email</label>
+					</div>
+					<div class="md-form form-sm"> <i class="fa fa-tag prefix grey-text"></i>
+						<input type="text" id="form32" class="form-control form-control-sm">
+						<label for="form34">Subject</label>
+					</div>
+					<div class="md-form form-sm"> <i class="fa fa-pencil prefix grey-text"></i>
+						<textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
+						<label for="form8">Your message</label>
+					</div>
+					<div class="text-center mt-4">
+						<button class="btn btn-primary">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+					</div>
+				</form>
+				<!-- Form contact -->
+			</div>
+			<!--Grid column-->
 
 		</section>
 
@@ -226,6 +248,26 @@
 
 </footer>
 <!--Footer-->
+
+<div class="modal fade bottom" id="not-implemented-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-frame modal-bottom" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal-label">Sorry!</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				Sorry, this isn't implemented yet! Check back later <i class="em em-smiley" style="font-size:11px"></i>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <!-- SCRIPTS -->
 <!-- JQuery -->
