@@ -12,15 +12,15 @@ header,
   background-size: cover; }
 
 .top-nav-collapse {
-  background-color: #3f51b5; }
+  background-color: #4285F4; }
 
 @media (max-width: 768px) {
   .navbar:not(.top-nav-collapse) {
-    background-color: #3f51b5; } }
+    background-color: #4285F4; } }
 
 @media (min-width: 800px) and (max-width: 850px) {
   .navbar:not(.top-nav-collapse) {
-    background-color: #3f51b5; } }
+    background-color: #4285F4; } }
 
 #about .description p, #about .list p,
 #projects .description p,

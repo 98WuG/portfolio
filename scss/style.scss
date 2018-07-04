@@ -1,3 +1,5 @@
+$navbar-color: #4285F4;
+
 html,
 body,
 header,
@@ -14,16 +16,16 @@ header,
 }
 
 .top-nav-collapse {
-	background-color: #3f51b5;
+	background-color: $navbar-color;
 }
 @media (max-width: 768px) {
 	.navbar:not(.top-nav-collapse) {
-		background-color: #3f51b5;
+		background-color: $navbar-color;
 	}
 }
 @media (min-width: 800px) and (max-width: 850px) {
 	.navbar:not(.top-nav-collapse) {
-		background-color: #3f51b5;
+		background-color: $navbar-color;
 	}
 }
 

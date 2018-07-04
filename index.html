@@ -7,6 +7,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="theme-color" content="#4285F4" />
 <title>Portfolio</title>
 <link rel="shortcut icon" href="favicon.ico" />
 
@@ -24,6 +25,9 @@
 
 <!-- Cerebral CSS -->
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Google reCAPTCHA -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 
@@ -49,24 +53,27 @@
 			<!-- Links -->
 			<ul class="navbar-nav mr-auto smooth-scroll">
 				<li class="nav-item active">
-				<a class="nav-link" href="#intro">Home
+					<a class="nav-link" href="#intro">Home
 				</a>
 				</li>
 				<li class="nav-item" id="aboutNav">
-				<a class="nav-link" href="#about">About</a>
+					<a class="nav-link" href="#about">About</a>
 				</li>
 				<li class="nav-item">
-				<a class="nav-link" href="#projects">Projects</a>
+					<a class="nav-link" href="#projects">Projects</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact</a>
 				</li>
 
 
 			</ul>
 
-			<ul class="navbar-nav nav-flex-icons social">
-				<li class="nav-items ml-2">
+			<ul class="navbar-nav nav-flex-icons">
+				<li class="nav-items ml-2 social">
 					<a href="https://github.com/98WuG/" target="_blank" class="nav-link white-text"><i class="fa fa-github"></i></a>
 				</li>
-				<li class="nav-items ml-2">
+				<li class="nav-items ml-2 social">
 					<a href="https://linkedin.com/in/98wug/" target="_blank" class="nav-link white-text"><i class="fa fa-linkedin"></i></a>
 				</li>
 		</div>
@@ -78,7 +85,7 @@
 	<!--Mask-->
 	<div id="intro" class="view">
 
-		<div class="mask rgba-black-strong">
+		<div class="mask rgba-black-strong intro">
 
 			<div class="container-fluid d-flex align-items-center justify-content-center h-100">
 
@@ -127,34 +134,25 @@
 
 			<div class="row list">
 				<div class="col-md-4 mb-1">
-					<i class="fa fa-code fa-4x indigo-text"></i>
+					<i class="fa fa-code fa-4x blue-text"></i>
 					<h4 class="mt-4 font-weight-bold">Software Development</h4>
 					<h6 class="grey-text">Scala, Java, C++</h6>
-				</div>
-				<div class="col-md-4 mb-1">
-					<i class="fa fa-html5 fa-4x indigo-text"></i>
-					<h4 class="mt-4 font-weight-bold">Web Development</h4>
-					<h6 class="grey-text">Linux/Apache/MySQL/PHP Stack</h6>
-				</div>
-				<div class="col-md-4 mb-1">
-					<i class="fa fa-desktop fa-4x indigo-text"></i>
-					<h4 class="mt-4 font-weight-bold">Information Technology</h4>
-					<h6 class="grey-text">Red Hat Enterprise Linux 7</h6>
-					</p>
-				</div>
-			</div>
-
-			<div class="row description">
-				<div class="col-md-4 mb-1">
 					<p>I'm a developer primarily focused in Object-Oriented Programming, with a working knowledge of Functional Programming. I'm most familiar with the Scala, Java, and C++ languages. I have also done projects in pure C, Python, Processing, and other assorted languages.</p>
 				</div>
 				<div class="col-md-4 mb-1">
+					<i class="fa fa-html5 fa-4x blue-text"></i>
+					<h4 class="mt-4 font-weight-bold">Web Development</h4>
+					<h6 class="grey-text">Linux/Apache/MySQL/PHP Stack</h6>
 					<p>On the web development side, I'm most familiar with the LAMP stack.<br>
 					In fact, this website is self-hosted on a LAMP stack, running on a headless minimal CentOS7 VPS, entirely configured from scratch.</p>
 				</div>
 				<div class="col-md-4 mb-1">
+					<i class="fa fa-desktop fa-4x blue-text"></i>
+					<h4 class="mt-4 font-weight-bold">Information Technology</h4>
+					<h6 class="grey-text">Red Hat Enterprise Linux 7</h6>
 					<p>I'm primarily a Linux systems administrator, specializing in Red Hat Enterprise Linux 7.<br>
 					I currently have my RHCSA certification, and am working on getting my RHCE and CCNA.
+					</p>
 				</div>
 			</div>
 
@@ -175,10 +173,9 @@
 			<div class="row list">
 				<div class="col-lg-4 col-md-12 mb-4">
 					<div class="view-overlay z-depth-1-half">
-						<a href="https://github.com/98WuG/QuantumEvolution">
+						<a href="https://github.com/98WuG/QuantumEvolution" target="_blank">
 							<img src="./images/quantum.jpg" class="img-fluid" alt="">
 						</a>
-						<div class="mask rgba-black-light"></div>
 					</div>
 
 					<h4 class="mt-4 font-weight-bold">Quantum Mechanical Wave Function Propagation</h4>
@@ -188,10 +185,9 @@
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="view-overlay z-depth-1-half">
-						<a href="https://github.com/98WuG/SeniorResearch">
+						<a href="https://github.com/98WuG/SeniorResearch" target="_blank">
 							<img src="./images/packing.jpg" class="img-fluid" alt="">
 						</a>
-						<div class="mask rgba-black-light"></div>
 					</div>
 
 					<h4 class="mt-4 font-weight-bold">An Approximate Solution to the Packing Problem</h4>
@@ -201,10 +197,9 @@
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="view-overlay z-depth-1-half">
-						<a href="https://github.com/98WuG/Authorize.Net-Web">
+						<a href="https://github.com/98WuG/Authorize.Net-Web" target="_blank">
 							<img src="./images/payment.jpg" class="img-fluid" alt="">
 						</a>
-						<div class="mask rgba-black-light"></div>
 					</div>
 
 					<h4 class="mt-4 font-weight-bold">PHP Implementation of Authorize.Net Payments</h4>
@@ -220,32 +215,35 @@
 
 			<div class="row d-flex justify-content-center mb-3">
 				<div class="col-md-8 text-center">
-					<p class="subtitle grey-text">Let me know if you're interested!</p>
+					<p class="subtitle grey-text">Let me know you're interested!</p>
 				</div>
 			</div>
 
 			<!--Grid column-->
-			<div class="col-lg-12 mb-5">
+			<div class="col-lg-9 mx-auto col-md-12 mb-5">
 				<!-- Form contact -->
 				<form action="javascript:email()">
 					<div class="md-form form-sm"> <i class="fa fa-user prefix grey-text"></i>
-						<input type="text" id="form3" class="form-control form-control-sm">
+						<input type="text" id="name" class="form-control form-control-sm" required />
 						<label for="form3">Your name</label>
 					</div>
 					<div class="md-form form-sm"> <i class="fa fa-envelope prefix grey-text"></i>
-						<input type="text" id="form2" class="form-control form-control-sm">
+						<input type="email" id="email" class="form-control form-control-sm" required />
 						<label for="form2">Your email</label>
 					</div>
 					<div class="md-form form-sm"> <i class="fa fa-tag prefix grey-text"></i>
-						<input type="text" id="form32" class="form-control form-control-sm">
+						<input type="text" id="subject" class="form-control form-control-sm" required />
 						<label for="form34">Subject</label>
 					</div>
 					<div class="md-form form-sm"> <i class="fa fa-pencil prefix grey-text"></i>
-						<textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
+						<textarea type="text" id="message" class="md-textarea form-control form-control-sm" rows="4" required></textarea>
 						<label for="form8">Your message</label>
 					</div>
-					<div class="text-center mt-4">
-						<button type="submit" class="btn btn-indigo">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+					<center>
+						<div class="g-recaptcha" data-sitekey="6LedWWIUAAAAAL4IgmBgPEfivTsjvz3HkdLJh9hM"></div>
+					</center>
+					<div class="text-center mt-2">
+						<button type="submit" class="btn btn-primary" id="send-button">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
 					</div>
 				</form>
 				<!-- Form contact -->
@@ -259,7 +257,7 @@
 
 <!--Footer-->
 <footer class="page-footer font-small">
-	<div class="indigo">
+	<div class="blue">
 		<div class="container">
 			<div class="row py-4 d-flex align-items-center">
 				<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
@@ -294,8 +292,21 @@
 	</div>
 </div>
 
-<div class="footer-copyright py-3 white-text text-center indigo darken-4">
-  ©2018 Copyright Gerald Wu
+<div class="modal fade bottom" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+	<div class="modal-dialog modal-frame modal-bottom" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="row d-flex justify-content-center align-items-center">
+					<p class="mx-3 pt-3 pr-2" id="send-status">Failed to send message!</p>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer-copyright py-3 white-text text-center blue darken-4">
+	&copy; Copyright 2018 Gerald Wu
 </div>
 
 
