@@ -1,0 +1,47 @@
+html,
+body,
+header,
+#intro {
+	height: 100%;
+}
+
+#intro {
+	background: url("../images/lead-bg.jpg")no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.top-nav-collapse {
+	background-color: #3f51b5;
+}
+@media (max-width: 768px) {
+	.navbar:not(.top-nav-collapse) {
+		background-color: #3f51b5;
+	}
+}
+@media (min-width: 800px) and (max-width: 850px) {
+	.navbar:not(.top-nav-collapse) {
+		background-color: #3f51b5;
+	}
+}
+
+#about {
+	.about-list {
+		p {
+			text-align: left;
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+			br {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.subtitle {
+		text-align: center;
+	}
+
+}

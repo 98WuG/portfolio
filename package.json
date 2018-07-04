@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Source code for my personal portfolio site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css",
+		"minify": "node-minify --compressor 'babel-minify,butternut,gcc,uglifyjs' --input js/external.js --output js/min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/98WuG/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/98WuG/portfolio/issues"
+  },
+  "homepage": "https://github.com/98WuG/portfolio#readme",
+  "dependencies": {
+    "node-minify": "^3.1.0",
+    "node-sass": "^4.9.0"
+  }
+}
