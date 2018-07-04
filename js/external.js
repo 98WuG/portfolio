@@ -53,6 +53,7 @@ $('.navbar-nav li').click(function(e) {
 
 // Handle contact form email
 function email() {
+	$('#send-button').html('Send <i class="fa fa-circle-o-notch fa-spin ml-1"></i>');
 	$.ajax({
 		type: "POST",
 		url: "backend/mail.php",
@@ -72,6 +73,7 @@ function email() {
 			} else {
 				status = "Failed to send email, please try again.";
 			}
+			$('#send-button').html('Send <i class="fa fa-paper-plane ml-1"></i>');
 			$('#send-status').text(status);
 			$('#contact-modal').modal();
 		}

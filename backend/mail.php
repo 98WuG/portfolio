@@ -56,7 +56,7 @@ function sendEmail($myemail, $name, $email, $subject, $message)
 {
 	// Email data
 	$to			= $myemail;
-	$subject	= "Contact form on " . time() . ": " . $subject . " from " . $email;
+	$subject2	= "Contact form on " . time() . ": " . $subject . " from " . $email;
 	$message	= "Name: ". $name . "<br>" .
 		"Email: " . $email . "<br>" .
 		"Subject: " . $subject . "<br>" .
@@ -67,7 +67,7 @@ function sendEmail($myemail, $name, $email, $subject, $message)
 		"X-Mailer: PHP/" . phpversion();
 
 	// Send email and read status
-	$status = mail($to, $subject, $message, $headers);
+	$status = mail($to, $subject2, $message, $headers);
 
 	// Return successful, otherwise error code 2
 	if( $status == true ) {
