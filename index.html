@@ -210,10 +210,16 @@
 		<section id="contact">
 			<h2 class="font-weight-bold text-center">Contact Me</h2>
 
+			<div class="row d-flex justify-content-center mb-3">
+				<div class="col-md-8 text-center">
+					<p class="subtitle grey-text">Let me know if you're interested!</p>
+				</div>
+			</div>
+
 			<!--Grid column-->
-			<div class="col-lg-5 col-md-12">
+			<div class="col-lg-12">
 				<!-- Form contact -->
-				<form class="p-5">
+				<form action="javascript:email()">
 					<div class="md-form form-sm"> <i class="fa fa-user prefix grey-text"></i>
 						<input type="text" id="form3" class="form-control form-control-sm">
 						<label for="form3">Your name</label>
@@ -231,7 +237,7 @@
 						<label for="form8">Your message</label>
 					</div>
 					<div class="text-center mt-4">
-						<button class="btn btn-primary">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+						<button type="submit" class="btn btn-primary">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
 					</div>
 				</form>
 				<!-- Form contact -->
@@ -252,17 +258,11 @@
 <div class="modal fade bottom" id="not-implemented-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-frame modal-bottom" role="document">
 		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="modal-label">Sorry!</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
 			<div class="modal-body">
-				Sorry, this isn't implemented yet! Check back later <i class="em em-smiley" style="font-size:11px"></i>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				<div class="row d-flex justify-content-center align-items-center">
+					<p class="mx-3 pt-3 pr-2">Sorry, this isn't implemented yet! Check back later <i class="em em-smiley" style="font-size:11px"></i></p>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
 			</div>
 		</div>
 	</div>

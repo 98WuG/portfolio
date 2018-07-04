@@ -36,3 +36,7 @@ $('.navbar-nav li').click(function(e) {
 	}
 	e.preventDefault();
 });
+
+function email() {
+	$('#not-implemented-modal').modal();
+}
