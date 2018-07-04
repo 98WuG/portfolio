@@ -26,15 +26,17 @@ $(document).ready(function () {
 });
 
 $('.navbar-nav li').click(function(e) {
-	var $this = $(this);
-	$('.navbar-nav li').removeClass('active');
-	if (!$this.hasClass('active')) {
-		$this.addClass('active');
+	if(!$this.hasClass('social')) {
+		var $this = $(this);
+		$('.navbar-nav li').removeClass('active');
+		if (!$this.hasClass('active')) {
+			$this.addClass('active');
+		}
+		if(!$('.navbar-toggler').hasClass('collapsed')) {
+			$('.navbar-toggler').click();
+		}
+		e.preventDefault();
 	}
-	if(!$('.navbar-toggler').hasClass('collapsed')) {
-		$('.navbar-toggler').click();
-	}
-	e.preventDefault();
 });
 
 function email() {
