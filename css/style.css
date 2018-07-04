@@ -22,12 +22,15 @@ header,
   .navbar:not(.top-nav-collapse) {
     background-color: #3f51b5; } }
 
-#about .about-list p {
+#about .list p,
+#projects .list p {
   text-align: left;
   margin-top: 20px;
   margin-bottom: 20px; }
-  #about .about-list p br {
+  #about .list p br,
+  #projects .list p br {
     margin-bottom: 5px; }
 
-#about .subtitle {
+#about .subtitle,
+#projects .subtitle {
   text-align: center; }

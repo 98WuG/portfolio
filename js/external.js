@@ -3,7 +3,7 @@ $(".view .mask").removeClass("waves-effect waves-light");
 $('.readmore').click(function() {
 	var sectionTo = $(this).attr('href');
 	$('html, body').animate({
-		scrollTop: $(sectionTo).offset().top - 100
+		scrollTop: $(sectionTo).offset().top - 90
 	}, 900, 'swing');
 	if(!$("#aboutNav").hasClass('active')) {
 		$('.navbar-nav li').removeClass('active');
@@ -19,7 +19,7 @@ $(document).ready(function () {
 			$target = $(target);
 
 		$('html, body').stop().animate({
-			'scrollTop': $target.offset().top - 100
+			'scrollTop': $target.offset().top - 90
 		}, 900, 'swing', function () {
 		});
 	});
@@ -30,6 +30,9 @@ $('.navbar-nav li').click(function(e) {
 	$('.navbar-nav li').removeClass('active');
 	if (!$this.hasClass('active')) {
 		$this.addClass('active');
+	}
+	if(!$('.navbar-toggler').hasClass('collapsed')) {
+		$('.navbar-toggler').click();
 	}
 	e.preventDefault();
 });
