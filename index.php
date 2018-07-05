@@ -145,20 +145,21 @@ $publickey = $ini_array["publickey"];
 					<i class="fa fa-code fa-4x blue-text"></i>
 					<h4 class="mt-4 font-weight-bold">Software Development</h4>
 					<h6 class="grey-text">Scala, Java, C++</h6>
-					<p>I'm a developer primarily focused in Object-Oriented Programming, with a working knowledge of Functional Programming. I'm most familiar with the Scala, Java, and C++ languages. I have also done projects in pure C, Python, Processing, and other assorted languages.</p>
+					<p>I'm a developer primarily focused in Object-Oriented Programming, with a working knowledge of Functional Programming. I'm most familiar with the Scala, Java, and C++ languages. Most of my past projects/internships use these languages.<br>I have also done projects in pure C, C#, Python, Processing, and other assorted languages.</p>
 				</div>
 				<div class="col-md-4 mb-1">
 					<i class="fa fa-html5 fa-4x blue-text"></i>
 					<h4 class="mt-4 font-weight-bold">Web Development</h4>
 					<h6 class="grey-text">Linux/Apache/MySQL/PHP Stack</h6>
-					<p>On the web development side, I'm most familiar with the LAMP stack.<br>
-					In fact, this website is self-hosted on a LAMP stack, running on a headless minimal CentOS7 VPS, entirely configured from scratch.</p>
+					<p>On the web development side, I'm most familiar with the <b>L</b>inux <b>A</b>pache <b>M</b>ySQL <b>P</b>HP stack. I also have small side projects in the <b>M</b>ongoDB <b>E</b>xpress <b>R</b>eact <b>N</b>ode stack.<br>
+					In fact, this website is self-hosted on a LAMP stack! You can view the source code <a href="https://github.com/98WuG/portfolio">here</a>.
 				</div>
 				<div class="col-md-4 mb-1">
 					<i class="fa fa-desktop fa-4x blue-text"></i>
 					<h4 class="mt-4 font-weight-bold">Information Technology</h4>
 					<h6 class="grey-text">Red Hat Enterprise Linux 7</h6>
 					<p>I'm primarily a Linux systems administrator, specializing in Red Hat Enterprise Linux 7.<br>
+					The website you're looking at is on a fully self-hosted CentOS 7 instance, running both a LAMP stack and a Dovecot/Sendmail email server, setup manually and entirely from scratch.<br>
 					I currently have my RHCSA certification, and am working on getting my RHCE and CCNA.
 					</p>
 				</div>

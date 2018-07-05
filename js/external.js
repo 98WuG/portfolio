@@ -1,5 +1,11 @@
-// Remove wave effect on intro image
-$(".view .intro").removeClass("waves-effect waves-light");
+$(document).ready(function() {
+	// Remove wave effect on intro image
+	$(".view .intro").removeClass("waves-effect waves-light");
+	// Prepare the smooth scrolling collapsible navbar hack
+	if(!$('.navbar-toggler').hasClass('collapsed')) {
+		$('.navbar-toggler').addClass('collapsed');
+	}
+});
 
 // Smooth scrolling for "read more" button
 // See navbar smooth scrolling
