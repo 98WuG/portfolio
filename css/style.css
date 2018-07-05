@@ -22,20 +22,17 @@ header,
   .navbar:not(.top-nav-collapse) {
     background-color: #4285F4; } }
 
-#about .description p, #about .list p,
-#projects .description p,
-#projects .list p {
+section .em {
+  font-size: 12px; }
+
+section .description p, section .list p {
   text-align: left; }
-  #about .description p br, #about .list p br,
-  #projects .description p br,
-  #projects .list p br {
+  section .description p br, section .list p br {
     margin-bottom: 5px; }
 
-#about .list p,
-#projects .list p {
+section .list p {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-#about .subtitle,
-#projects .subtitle {
+section .subtitle {
   text-align: center; }

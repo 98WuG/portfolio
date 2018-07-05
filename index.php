@@ -78,10 +78,10 @@ $publickey = $ini_array["publickey"];
 
 			<ul class="navbar-nav nav-flex-icons">
 				<li class="nav-items ml-2 social">
-					<a href="https://github.com/98WuG/" target="_blank" class="nav-link white-text"><i class="fa fa-github"></i></a>
+					<a href="https://github.com/98WuG/" class="nav-link white-text"><i class="fa fa-github"></i></a>
 				</li>
 				<li class="nav-items ml-2 social">
-					<a href="https://linkedin.com/in/98wug/" target="_blank" class="nav-link white-text"><i class="fa fa-linkedin"></i></a>
+					<a href="https://linkedin.com/in/98wug/" class="nav-link white-text"><i class="fa fa-linkedin"></i></a>
 				</li>
 			</ul>
 		</div>
@@ -136,7 +136,7 @@ $publickey = $ini_array["publickey"];
 
 			<div class="row d-flex justify-content-center mb-3">
 				<div class="col-md-8">
-					<p class="subtitle grey-text">Here's a little bit about me <i class="em em-smiley" style="font-size:11px"></i></p>
+					<p class="subtitle grey-text">Here's a little bit about me <i class="em em-smiley"></i></p>
 				</div>
 			</div>
 
@@ -152,7 +152,7 @@ $publickey = $ini_array["publickey"];
 					<h4 class="mt-4 font-weight-bold">Web Development</h4>
 					<h6 class="grey-text">Linux/Apache/MySQL/PHP Stack</h6>
 					<p>On the web development side, I'm most familiar with the <b>L</b>inux <b>A</b>pache <b>M</b>ySQL <b>P</b>HP stack. I also have small side projects in the <b>M</b>ongoDB <b>E</b>xpress <b>R</b>eact <b>N</b>ode stack.<br>
-					In fact, this website is self-hosted on a LAMP stack! You can view the source code <a href="https://github.com/98WuG/portfolio">here</a>.
+					In fact, this website is self-hosted on a LAMP stack! You can view the source code <a href="https://github.com/98WuG/portfolio">here</a> (this is not WordPress).
 				</div>
 				<div class="col-md-4 mb-1">
 					<i class="fa fa-desktop fa-4x blue-text"></i>
@@ -182,7 +182,7 @@ $publickey = $ini_array["publickey"];
 			<div class="row list">
 				<div class="col-lg-4 col-md-12 mb-4">
 					<div class="view-overlay z-depth-1-half">
-						<a href="https://github.com/98WuG/QuantumEvolution" target="_blank">
+						<a href="https://github.com/98WuG/QuantumEvolution">
 							<img src="./images/quantum.jpg" class="img-fluid" alt="">
 						</a>
 					</div>
@@ -194,7 +194,7 @@ $publickey = $ini_array["publickey"];
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="view-overlay z-depth-1-half">
-						<a href="https://github.com/98WuG/SeniorResearch" target="_blank">
+						<a href="https://github.com/98WuG/SeniorResearch">
 							<img src="./images/packing.jpg" class="img-fluid" alt="">
 						</a>
 					</div>
@@ -206,7 +206,7 @@ $publickey = $ini_array["publickey"];
 
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="view-overlay z-depth-1-half">
-						<a href="https://github.com/98WuG/Authorize.Net-Web" target="_blank">
+						<a href="https://github.com/98WuG/Authorize.Net-Web">
 							<img src="./images/payment.jpg" class="img-fluid" alt="">
 						</a>
 					</div>

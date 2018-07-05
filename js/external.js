@@ -1,6 +1,8 @@
 $(document).ready(function() {
 	// Remove wave effect on intro image
 	$(".view .intro").removeClass("waves-effect waves-light");
+	// Open all external links in new tab
+	$('a[href^=http').attr("target", "_blank");
 	// Prepare the smooth scrolling collapsible navbar hack
 	if(!$('.navbar-toggler').hasClass('collapsed')) {
 		$('.navbar-toggler').addClass('collapsed');
