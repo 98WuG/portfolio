@@ -1,22 +1,28 @@
 <?php
 
 require 'backend/queryData.php';
+require 'backend/generate.php';
 
 // Captcha
 $ini_array = parse_ini_file("backend/config.ini");
 $publickey = $ini_array["publickey"];
 
+// Generate about me entries
+$aboutMeContent = aboutMeEntry(1);
+$aboutMeContent .= aboutMeEntry(2);
+$aboutMeContent .= aboutMeEntry(3);
+$aboutMeContent = listContent($aboutMeContent);
 
-function aboutMeEntry($id) {
-	$table = "aboutme";
-	$div = "<div class=\"col-md-4 mb-1\">";
-	$div .= "<i class=\"fa fa-" . queryData("icon", $table, $id) . " fa-4x blue-text\"></i>";
-	$div .= "<h4 class=\"mt-4 font-weight-bold\">" . queryData("title", $table, $id) . "</h4>";
-	$div .= "<h6 class=\"grey-text\">" . queryData("subtitle", $table, $id) . "</h6>";
-	$div .= "<p>" . queryData("description", $table, $id) . "</p>";
-	$div .= "</div>";
-	echo $div;
-}
+// Generate project entries
+$projectContent = projectEntry(1);
+$projectContent .= projectEntry(2);
+$projectContent .= projectEntry(3);
+$projectContent = listContent($projectContent);
+
+// Generate sections
+$aboutMe = sectionEntry(1, $aboutMeContent);
+$projects = sectionEntry(2, $projectContent);
+
 
 ?>
 
@@ -145,88 +151,18 @@ function aboutMeEntry($id) {
 <main class="mt-5">
 	<div class="container">
 
-		<section id="about" class="text-center">
-
-			<h2 class="mb-2 font-weight-bold">Hi, I'm Gerald!</h2>
-
-			<div class="row d-flex justify-content-center mb-3">
-				<div class="col-md-8">
-					<p class="subtitle grey-text">Here's a little bit about me <i class="em em-smiley"></i></p>
-				</div>
-			</div>
-
-			<div class="row list">
-				<?php
-					aboutMeEntry(1);
-					aboutMeEntry(2);
-					aboutMeEntry(3);
-				?>
-			</div>
-
-		</section>
-
-		<hr class="my-5">
-
-		<section id="projects" class="text-center">
-
-			<h2 class="mb-2 font-weight-bold">My Projects</h2>
-
-			<div class="row d-flex justify-content-center mb-3">
-				<div class="col-md-8">
-					<p class="subtitle grey-text">Just a few projects I've worked on. Click on an image to learn more.</p>
-				</div>
-			</div>
-
-			<div class="row list">
-				<div class="col-lg-4 col-md-12 mb-4">
-					<div class="view-overlay z-depth-1-half">
-						<a href="https://github.com/98WuG/QuantumEvolution">
-							<img src="./images/quantum.jpg" class="img-fluid" alt="">
-						</a>
-					</div>
-
-					<h4 class="mt-4 font-weight-bold">Quantum Mechanical Wave Function Propagation</h4>
-					<h6 class="grey-text">Processing</h6>
-					<p class="grey-text">A program to evolve arbitrary initial states through time for the one-dimensional Schrodinger Equation and Wave Equation in the absence of a potential field. Highly optimized to run in <b>real time</b>. No pre-rendering. Accurate to millions of timesteps before runaway error propagation. Written in Processing (a fork of Java with a focus on real-time graphing), with a small shell script launcher.
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-					<div class="view-overlay z-depth-1-half">
-						<a href="https://github.com/98WuG/SeniorResearch">
-							<img src="./images/packing.jpg" class="img-fluid" alt="">
-						</a>
-					</div>
-
-					<h4 class="mt-4 font-weight-bold">An Approximate Solution to the Packing Problem</h4>
-					<h6 class="grey-text">C++ / Shell</h6>
-					<p class="grey-text">This program provides an approximate, polynomial time solution to the classic NP-hard packing problem. Implemented using the sorting-first greedy approach to packing. Includes a detailed report showcasing results (typeset in LaTeX). Writte in C++, with a shell script helper for initalization and final visualization.
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-					<div class="view-overlay z-depth-1-half">
-						<a href="https://github.com/98WuG/Authorize.Net-Web">
-							<img src="./images/payment.jpg" class="img-fluid" alt="">
-						</a>
-					</div>
-
-					<h4 class="mt-4 font-weight-bold">PHP Implementation of Authorize.Net Payments</h4>
-					<h6 class="grey-text">PHP / JQuery</h6>
-					<p class="grey-text">An implementation of Authorize.Net's API in PHP that allows merchants to store payment methods without any sensitive information hitting the merchant's database, thereby exempting them from tedious PCI compliance. These may also be charged at a later date. Responsive front-end design with mdbootstrap and flexible backend written in PHP.
-				</div>
-			</div>
-		</section>
-
-		<hr class="my-5">
+		<?php
+			echo $aboutMe;
+			echo $projects;
+		?>
 
 		<section id="contact">
 			<h2 class="font-weight-bold text-center">Contact Me</h2>
-
 			<div class="row d-flex justify-content-center mb-3">
 				<div class="col-md-8 text-center">
 					<p class="subtitle grey-text">Let me know you're interested!</p>
 				</div>
 			</div>
-
 			<!--Grid column-->
 			<div class="col-lg-9 mx-auto col-md-12 mb-5">
 				<!-- Form contact -->
@@ -257,7 +193,6 @@ function aboutMeEntry($id) {
 				<!-- Form contact -->
 			</div>
 			<!--Grid column-->
-
 		</section>
 	</div>
 

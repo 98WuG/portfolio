@@ -26,7 +26,8 @@ section .em {
   font-size: 12px; }
 
 section .description p, section .list p {
-  text-align: left; }
+  text-align: left;
+  color: #4B515D; }
   section .description p br, section .list p br {
     margin-bottom: 5px; }
 
