@@ -75,14 +75,14 @@ function email() {
 		success: function(response) {
 			var status = "";
 			if(response == 0) {
-				status = "Email sent!";
+				status = "Email sent! Thanks for reaching out <i class='em em-smiley'></i>";
 			} else if(response == 1) {
 				status = "Captcha failed! Please try again.";
 			} else {
 				status = "Failed to send email, please try again.";
 			}
 			$('#send-button').html('Send <i class="fa fa-paper-plane ml-1"></i>');
-			$('#send-status').text(status);
+			$('#send-status').html(status);
 			$('#contact-modal').modal();
 		}
 	});

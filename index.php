@@ -157,7 +157,7 @@ $contact = sectionEntry(3, $contactContent, false);
 
 <!--Footer-->
 <footer class="page-footer font-small">
-	<div class="blue">
+	<div class="primary-color">
 		<div class="container">
 			<div class="row py-4 d-flex align-items-center">
 				<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">

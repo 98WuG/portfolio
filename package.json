@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch scss -o css",
-		"minify": "node-minify --compressor 'babel-minify,butternut,gcc,uglifyjs' --input js/external.js --output js/min.js"
+		"minify": "node-minify --compressor 'babel-minify' --input js/external.js --output js/min.js"
   },
   "repository": {
     "type": "git",

@@ -59,7 +59,7 @@ function formContent($content) {
 	$div .= $content;
 	$div .= "<div class=\"md-form form-sm\"> <i class=\"fa fa-pencil prefix grey-text\"></i>";
 	$div .= "<textarea type=\"text\" id=\"message\" class=\"md-textarea form-control form-control-sm\" rows=\"4\" required></textarea>";
-	$div .= "<label for=\"form8\">Message</label>";
+	$div .= "<label for=\"message\">Message</label>";
 	$div .= "</div>";
 	$div .= "<center>";
 	$div .= "<div class=\"g-recaptcha\" data-sitekey=\"$publickey\"></div>";

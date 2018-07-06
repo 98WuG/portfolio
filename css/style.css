@@ -22,7 +22,7 @@ header,
   .navbar:not(.top-nav-collapse) {
     background-color: #4285F4; } }
 
-section .em {
+.em {
   font-size: 12px; }
 
 section .description p, section .list p {
