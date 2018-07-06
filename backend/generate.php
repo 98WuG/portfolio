@@ -1,5 +1,9 @@
 <?php
 
+// Captcha
+$ini_array = parse_ini_file("backend/config.ini");
+$publickey = $ini_array["publickey"];
+
 // Generate entries for About Me section
 function aboutMeEntry($id) {
 	$table = "aboutme";
@@ -27,6 +31,15 @@ function projectEntry($id) {
 	$div .= "</div>";
 	return $div;
 }
+// Generate contact form fields
+function contactEntry($id) {
+	$table = "form";
+	$div = "<div class=\"md-form form-sm\"> <i class=\"fa fa-" . queryData("icon", $table, $id) . " prefix grey-text\"></i>";
+	$div .= "<input type=\"" . queryData("type", $table, $id) . "\" id=\"" . queryData("htmlID", $table, $id) . "\" class=\"form-control form-control-sm\" required />";
+	$div .= "<label for=\"" . queryData("htmlID", $table, $id) . "\">" . queryData("label", $table, $id) . "</label>";
+	$div .= "</div>";
+	return $div;
+}
 
 // Generate content if class "list"
 function listContent($content) {
@@ -38,11 +51,36 @@ function listContent($content) {
 	return $div;
 }
 
+// Generate content if contact form
+function formContent($content) {
+	global $publickey;
+	$div = "<div class=\"col-lg-9 mx-auto col-md-12 mb-5\">";
+	$div .= "<form action=\"javascript:email()\">";
+	$div .= $content;
+	$div .= "<div class=\"md-form form-sm\"> <i class=\"fa fa-pencil prefix grey-text\"></i>";
+	$div .= "<textarea type=\"text\" id=\"message\" class=\"md-textarea form-control form-control-sm\" rows=\"4\" required></textarea>";
+	$div .= "<label for=\"form8\">Message</label>";
+	$div .= "</div>";
+	$div .= "<center>";
+	$div .= "<div class=\"g-recaptcha\" data-sitekey=\"$publickey\"></div>";
+	$div .= "</center>";
+	$div .= "<div class=\"text-center mt-2\">";
+	$div .= "<button type=\"submit\" class=\"btn btn-primary\" id=\"send-button\">Send <i class=\"fa fa-paper-plane-o ml-1\"></i></button>";
+	$div .= "</div>";
+	$div .= "</form>";
+	$div .= "</div>";
+	return $div;
+}
+
 // Generate sections from entries
-function sectionEntry($id, $content) {
+function sectionEntry($id, $content, $center) {
 	$table = "sections";
-	$div = "<section id=\"" . queryData("htmlID", $table, $id) . "\" class=\"text-center\">";
-	$div .= "<h2 class=\"mb-2 font-weight-bold\">" . queryData("title", $table, $id). "</h2>";
+	if($center) {
+		$div = "<section id=\"" . queryData("htmlID", $table, $id) . "\" class=\"text-center\">";
+	} else {
+		$div = "<section id=\"" . queryData("htmlID", $table, $id) . "\">";
+	}
+	$div .= "<h2 class=\"mb-2 font-weight-bold title\">" . queryData("title", $table, $id). "</h2>";
 	$div .= "<div class=\"row d-flex justify-content-center mb-3\">";
 	$div .= "<div class=\"col-md-8\">";
 	$div .= "<p class=\"subtitle grey-text\">" . queryData("subtitle", $table, $id) . "</i></p>";

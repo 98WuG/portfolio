@@ -35,5 +35,5 @@ section .list p {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-section .subtitle {
+section .title, section .subtitle {
   text-align: center; }

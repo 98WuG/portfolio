@@ -3,10 +3,6 @@
 require 'backend/queryData.php';
 require 'backend/generate.php';
 
-// Captcha
-$ini_array = parse_ini_file("backend/config.ini");
-$publickey = $ini_array["publickey"];
-
 // Generate about me entries
 $aboutMeContent = aboutMeEntry(1);
 $aboutMeContent .= aboutMeEntry(2);
@@ -19,10 +15,16 @@ $projectContent .= projectEntry(2);
 $projectContent .= projectEntry(3);
 $projectContent = listContent($projectContent);
 
-// Generate sections
-$aboutMe = sectionEntry(1, $aboutMeContent);
-$projects = sectionEntry(2, $projectContent);
+// Generate contact form entries
+$contactContent = contactEntry(1);
+$contactContent .= contactEntry(2);
+$contactContent .= contactEntry(3);
+$contactContent = formContent($contactContent);
 
+// Generate sections
+$aboutMe = sectionEntry(1, $aboutMeContent, true);
+$projects = sectionEntry(2, $projectContent, true);
+$contact = sectionEntry(3, $contactContent, false);
 
 ?>
 
@@ -93,8 +95,6 @@ $projects = sectionEntry(2, $projectContent);
 				<li class="nav-item">
 					<a class="nav-link" href="#contact">Contact</a>
 				</li>
-
-
 			</ul>
 
 			<ul class="navbar-nav nav-flex-icons">
@@ -113,34 +113,22 @@ $projects = sectionEntry(2, $projectContent);
 
 	<!--Mask-->
 	<div id="intro" class="view">
-
 		<div class="mask rgba-black-strong intro">
-
 			<div class="container-fluid d-flex align-items-center justify-content-center h-100">
-
 				<div class="row d-flex justify-content-center text-center">
-
 					<div class="col-md-12">
-
 						<!-- Heading -->
 						<h2 class="display-3 font-weight-bold white-text pt-5 mb-3">Gerald Wu</h2>
-
 						<!-- Divider -->
 						<hr class="hr-light">
-
 						<!-- Description -->
 						<h4 class="white-text">Software Development / IT</h4>
 						<h6 class="white-text mb-4">Scala, Java, C++, Webdev / RHEL7</h6>
 						<button type="button" class="btn btn-outline-white readmore" href="#about">About Me</button>
-
 					</div>
-
 				</div>
-
 			</div>
-
 		</div>
-
 	</div>
 	<!--/.Mask-->
 
@@ -154,46 +142,9 @@ $projects = sectionEntry(2, $projectContent);
 		<?php
 			echo $aboutMe;
 			echo $projects;
+			echo $contact;
 		?>
 
-		<section id="contact">
-			<h2 class="font-weight-bold text-center">Contact Me</h2>
-			<div class="row d-flex justify-content-center mb-3">
-				<div class="col-md-8 text-center">
-					<p class="subtitle grey-text">Let me know you're interested!</p>
-				</div>
-			</div>
-			<!--Grid column-->
-			<div class="col-lg-9 mx-auto col-md-12 mb-5">
-				<!-- Form contact -->
-				<form action="javascript:email()">
-					<div class="md-form form-sm"> <i class="fa fa-user prefix grey-text"></i>
-						<input type="text" id="name" class="form-control form-control-sm" required />
-						<label for="form3">Name</label>
-					</div>
-					<div class="md-form form-sm"> <i class="fa fa-envelope prefix grey-text"></i>
-						<input type="email" id="email" class="form-control form-control-sm" required />
-						<label for="form2">Email</label>
-					</div>
-					<div class="md-form form-sm"> <i class="fa fa-tag prefix grey-text"></i>
-						<input type="text" id="subject" class="form-control form-control-sm" required />
-						<label for="form34">Subject</label>
-					</div>
-					<div class="md-form form-sm"> <i class="fa fa-pencil prefix grey-text"></i>
-						<textarea type="text" id="message" class="md-textarea form-control form-control-sm" rows="4" required></textarea>
-						<label for="form8">Message</label>
-					</div>
-					<center>
-						<div class="g-recaptcha" data-sitekey="<?php echo $publickey ?>"></div>
-					</center>
-					<div class="text-center mt-2">
-						<button type="submit" class="btn btn-primary" id="send-button">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
-					</div>
-				</form>
-				<!-- Form contact -->
-			</div>
-			<!--Grid column-->
-		</section>
 	</div>
 
 </main>
