@@ -38,7 +38,7 @@ $contact = sectionEntry(3, $contactContent, false);
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="theme-color" content="#4285F4" />
-<title>Gerald Wu's Portfolio</title>
+<title>Gerald Wu</title>
 <link rel="shortcut icon" href="favicon.ico" />
 
 <!-- Font Awesome -->
@@ -83,17 +83,22 @@ $contact = sectionEntry(3, $contactContent, false);
 			<!-- Links -->
 			<ul class="navbar-nav mr-auto smooth-scroll">
 				<li class="nav-item active">
-					<a class="nav-link" href="#intro">Home
-				</a>
+					<a class="nav-link" href="#intro">Home</a>
 				</li>
 				<li class="nav-item" id="aboutNav">
-					<a class="nav-link" href="#about">About</a>
+					<a class="nav-link" href="#<?php echo queryData("htmlID", "sections", 1); ?>">
+						<?php echo ucfirst(queryData("htmlID", "sections", 1)); ?>
+					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#projects">Projects</a>
+					<a class="nav-link" href="#<?php echo queryData("htmlID", "sections", 2); ?>">
+						<?php echo ucfirst(queryData("htmlID", "sections", 2)); ?>
+					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#contact">Contact</a>
+					<a class="nav-link" href="#<?php echo queryData("htmlID", "sections", 3); ?>">
+						<?php echo ucfirst(queryData("htmlID", "sections", 3)); ?>
+					</a>
 				</li>
 			</ul>
 
