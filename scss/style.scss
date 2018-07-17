@@ -34,19 +34,21 @@ header,
 	font-size: 12px;
 }
 
+.crop {
+	height: 250px;
+}
+
 
 section {
 	.description {
 		p {
 			text-align: left;
 			color: #4B515D;
-
 			br {
 				margin-bottom: 5px;
 			}
 		}
 	}
-
 	.list {
 		@extend .description;
 		p {
@@ -54,7 +56,23 @@ section {
 			margin-bottom: 20px;
 		}
 	}
-
+	.experience {
+		@extend .description;
+		.card-title {
+			display: inline-block;
+		}
+		.right {
+			@extend .card-title;
+			float:right;
+		}
+		.left {
+			@extend .card-title;
+			float:left;
+		}
+		.date {
+			font-size: 14px;
+		}
+	}
 	.title, .subtitle {
 		text-align: center;
 	}

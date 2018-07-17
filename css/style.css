@@ -25,15 +25,30 @@ header,
 .em {
   font-size: 12px; }
 
-section .description p, section .list p {
+.crop {
+  height: 250px; }
+
+section .description p, section .list p, section .experience p {
   text-align: left;
   color: #4B515D; }
-  section .description p br, section .list p br {
+  section .description p br, section .list p br, section .experience p br {
     margin-bottom: 5px; }
 
 section .list p {
   margin-top: 20px;
   margin-bottom: 20px; }
+
+section .experience .card-title, section .experience .right, section .experience .left {
+  display: inline-block; }
+
+section .experience .right {
+  float: right; }
+
+section .experience .left {
+  float: left; }
+
+section .experience .date {
+  font-size: 14px; }
 
 section .title, section .subtitle {
   text-align: center; }

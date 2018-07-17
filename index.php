@@ -15,6 +15,23 @@ $projectContent .= projectEntry(2);
 $projectContent .= projectEntry(3);
 $projectContent = listContent($projectContent);
 
+// Generate blog content
+$blogContent = "<div class=\"col-lg-9 col-md-10 mx-auto text-center\">"
+	. "<div class=\"card card-cascade\">"
+		. "<div class=\"view overlay\">"
+			. "<img class=\"card-img-top\" src=\"images/blog.jpg\">"
+			. "<a href=\"https://blog.geraldwu.com/\">"
+				. "<div class=\"mask rgba-white-slight\"></div>"
+			. "</a>"
+		. "</div>"
+		. "<div class=\"card-body card-body-cascade text-center\">"
+			. "<h4 class=\"card-title\"><strong>Gerald Wu's Blog</strong></h4>"
+			. "<h6 class=\"font-weight-bold indigo-text py-2\">Musings of a Tech Enthusiast</h6>"
+			. "<p class=\"card-text\">Just another blog for technological tinkering. Focused on custom-built keyboards, hardware mods, Linux setups, and more.<br>I like spending hours to improve my workflow by seconds.</p>"
+		. "</div>"
+	. "</div>";
+$blogContent = sectionContent($blogContent);
+
 // Generate contact form entries
 $contactContent = contactEntry(1);
 $contactContent .= contactEntry(2);
@@ -24,7 +41,8 @@ $contactContent = formContent($contactContent);
 // Generate sections
 $aboutMe = sectionEntry(1, $aboutMeContent, true);
 $projects = sectionEntry(2, $projectContent, true);
-$contact = sectionEntry(3, $contactContent, false);
+$blog = sectionEntry(3, $blogContent, true);
+$contact = sectionEntry(4, $contactContent, false);
 
 ?>
 
@@ -100,6 +118,11 @@ $contact = sectionEntry(3, $contactContent, false);
 						<?php echo ucfirst(queryData("htmlID", "sections", 3)); ?>
 					</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#<?php echo queryData("htmlID", "sections", 4); ?>">
+						<?php echo ucfirst(queryData("htmlID", "sections", 4)); ?>
+					</a>
+				</li>
 			</ul>
 
 			<ul class="navbar-nav nav-flex-icons">
@@ -147,8 +170,10 @@ $contact = sectionEntry(3, $contactContent, false);
 		<?php
 			echo $aboutMe;
 			echo $projects;
+			echo $blog;
 			echo $contact;
 		?>
+
 
 	</div>
 

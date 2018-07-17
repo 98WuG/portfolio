@@ -51,6 +51,16 @@ function listContent($content) {
 	return $div;
 }
 
+// Generate content if not "list"
+function sectionContent($content) {
+	$div = "<div class=\"row\">";
+	$div .= $content;
+	$div .= "</div>";
+	$div .= "</section>";
+	$div .= "<hr class=\"my-5\">";
+	return $div;
+}
+
 // Generate content if contact form
 function formContent($content) {
 	global $publickey;
