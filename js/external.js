@@ -1,4 +1,10 @@
 $(document).ready(function() {
+	$("#blog-desc").click(function() {
+		window.open('https://blog.geraldwu.com', '_blank');
+	})
+});
+
+$(document).ready(function() {
 	// Remove wave effect on intro image
 	$(".view .intro").removeClass("waves-effect waves-light");
 	// Open all external links in new tab

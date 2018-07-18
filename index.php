@@ -16,19 +16,20 @@ $projectContent .= projectEntry(3);
 $projectContent = listContent($projectContent);
 
 // Generate blog content
-$blogContent = "<div class=\"col-lg-9 col-md-10 mx-auto text-center\">"
-	. "<div class=\"card card-cascade\">"
-		. "<div class=\"view overlay\">"
-			. "<img class=\"card-img-top\" src=\"images/blog.jpg\">"
-			. "<a href=\"https://blog.geraldwu.com/\">"
-				. "<div class=\"mask rgba-white-slight\"></div>"
+$blogContent = "<div class=\"col-lg-4 offset-lg-2 col-md-6 text-center mb-4\">"
+		. "<div class=\"view overlay z-depth-2 zoom\">"
+			. "<img src=\"images/blog.jpg\" class=\"img-fluid hoverable\" alt=\"blog\">"
+			. "<a href=\"https://blog.geraldwu.com\">"
+				. "<div class=\"mask flex-center waves-effect waves-light rgba-white-slight\">"
+					. "<p class=\"white-text\">Open in new tab</p>"
+				. "</div>"
 			. "</a>"
 		. "</div>"
-		. "<div class=\"card-body card-body-cascade text-center\">"
-			. "<h4 class=\"card-title\"><strong>Gerald Wu's Blog</strong></h4>"
-			. "<h6 class=\"font-weight-bold indigo-text py-2\">Musings of a Tech Enthusiast</h6>"
-			. "<p class=\"card-text\">Just another blog for technological tinkering. Focused on custom-built keyboards, hardware mods, Linux setups, and more.<br>I like spending hours to improve my workflow by seconds.</p>"
-		. "</div>"
+	. "</div>"
+	. "<div id=\"blog-desc\" class=\"col-lg-4 col-md-6 text-left my-auto\" onmouseover=\"\"\">"
+		. "<h4 class=\"font-weight-bold text-primary h4-responsive\">Gerald Wu's Blog</h4>"
+		. "<h6 class=\"grey-text\">Musings of a Tech Enthusiast</h6>"
+		. "<p>Just another blog for technological tinkering. Focused on custom-built keyboards, hardware mods, Linux setups, and more.<br>I like spending hours to improve my workflow by seconds.</p>"
 	. "</div>";
 $blogContent = sectionContent($blogContent);
 
