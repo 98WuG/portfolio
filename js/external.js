@@ -1,6 +1,7 @@
 $(document).ready(function() {
-	$("#blog-desc").click(function() {
-		window.open('https://blog.geraldwu.com', '_blank');
+	$(".self-desc").click(function() {
+		var link = $(this).parent().find('a').attr('href');
+		window.open(link, '_blank');
 	})
 });
 

@@ -45,7 +45,7 @@ function selfEntry($id) {
 	$div .= "</a>";
 	$div .= "</div>";
 	$div .= "</div>";
-	$div .= "<div id=\"blog-desc\" class=\"col-lg-4 col-md-6 text-left my-auto\" onmouseover=\"\"\">";
+	$div .= "<div class=\"col-lg-4 col-md-6 text-left my-auto self-desc\" onmouseover=\"\"\">";
 	$div .= "<h4 class=\"font-weight-bold h4-responsive\">" . queryData("title", $table, $id). "</h4>";
 	$div .= "<h6 class=\"grey-text\">" . queryData("subtitle", $table, $id) . "</h6>";
 	$div .= "<p>" . queryData("description", $table, $id) . "</p>";

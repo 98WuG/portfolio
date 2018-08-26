@@ -25,7 +25,7 @@ header,
 .em {
   font-size: 12px; }
 
-#blog-desc {
+.self-desc {
   cursor: pointer; }
 
 section .description p, section .list p, section .experience p {
