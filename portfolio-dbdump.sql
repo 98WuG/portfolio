@@ -122,7 +122,7 @@ CREATE TABLE `sections` (
 
 LOCK TABLES `sections` WRITE;
 /*!40000 ALTER TABLE `sections` DISABLE KEYS */;
-INSERT INTO `sections` VALUES (1,'about','Hi, I\'m Gerald!','Here\'s a little bit about me <i class=\"em em-smiley\"></i>'),(2,'projects','My Projects','Just a few projects I\'ve worked on. Click on any image to learn more.'),(3,'blog','My Blog','I also run a blog! It\'s mostly about tinkering with electronics. Interested?'),(4,'contact','Contact Me','Let me know you\'re interested!');
+INSERT INTO `sections` VALUES (1,'about','Hi, I\'m Gerald!','Here\'s a little bit about me <i class=\"em em-smiley\"></i>'),(2,'projects','My Projects','Just a few projects I\'ve worked on. Click on any image to learn more.'),(3,'self-hosted','Self-hosted','I also run a few self-hosted things! Check them out below.'),(4,'contact','Contact Me','Let me know you\'re interested!');
 /*!40000 ALTER TABLE `sections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -141,7 +141,7 @@ CREATE TABLE `self` (
   `picture` varchar(100) DEFAULT NULL,
   `link` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,7 +150,7 @@ CREATE TABLE `self` (
 
 LOCK TABLES `self` WRITE;
 /*!40000 ALTER TABLE `self` DISABLE KEYS */;
-INSERT INTO `self` VALUES (1,'Gerald Wu\'s Blog','Musings of a Tech Enthusiast','Just another blog for technological tinkering. Focused on custom-built keyboards, hardware mods, Linux setups, and more.<br>\r\nI like spending hours to improve my workflow by seconds.','images/blog.jpg','https://blog.geraldwu.com');
+INSERT INTO `self` VALUES (1,'Gerald Wu\'s Blog','Musings of a Tech Enthusiast','Just another blog for technological tinkering. Focused on custom-built keyboards, hardware mods, Linux setups, and more.<br>\r\nI like spending hours to improve my workflow by seconds.','images/blog.jpg','https://blog.geraldwu.com'),(2,'Git Server','Powered by Gitea','A little remote git server, running on this very same LAMP instance. Powered by Gitea. It\'s the main internet-connected remote I use for all my git repositories.','images/git.jpg','https://git.geraldwu.com/');
 /*!40000 ALTER TABLE `self` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -163,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-26  2:28:00
+-- Dump completed on 2018-08-26  3:20:40

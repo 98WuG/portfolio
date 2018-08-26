@@ -17,6 +17,7 @@ $projectContent = listContent($projectContent);
 
 // Generate self-hosted content
 $selfContent = selfEntry(1);
+$selfContent .= selfEntry(2);
 $selfContent = sectionContent($selfContent);
 
 // Generate contact form entries

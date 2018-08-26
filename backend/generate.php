@@ -39,7 +39,7 @@ function selfEntry($id) {
 	$div .= "<div class=\"view overlay z-depth-2 zoom\">";
 	$div .= "<img src=\"" . queryData("picture", $table, $id) . "\" class=\"img-fluid hoverable\" alt=\"blog\">";
 	$div .= "<a href=\"" . queryData("link", $table, $id) . "\">";
-	$div .= "<div class=\"mask flex-center waves-effect waves-light rgba-white-slight\">";
+	$div .= "<div class=\"mask flex-center waves-effect waves-light rgba-white-light\">";
 	$div .= "<p class=\"white-text\">Open in new tab</p>";
 	$div .= "</div>";
 	$div .= "</a>";
