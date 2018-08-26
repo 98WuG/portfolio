@@ -31,6 +31,28 @@ function projectEntry($id) {
 	$div .= "</div>";
 	return $div;
 }
+
+// Generate self-hosted fields
+function selfEntry($id) {
+	$table = "self";
+	$div = "<div class=\"col-lg-4 offset-lg-2 col-md-6 text-center mb-4\">";
+	$div .= "<div class=\"view overlay z-depth-2 zoom\">";
+	$div .= "<img src=\"" . queryData("picture", $table, $id) . "\" class=\"img-fluid hoverable\" alt=\"blog\">";
+	$div .= "<a href=\"" . queryData("link", $table, $id) . "\">";
+	$div .= "<div class=\"mask flex-center waves-effect waves-light rgba-white-slight\">";
+	$div .= "<p class=\"white-text\">Open in new tab</p>";
+	$div .= "</div>";
+	$div .= "</a>";
+	$div .= "</div>";
+	$div .= "</div>";
+	$div .= "<div id=\"blog-desc\" class=\"col-lg-4 col-md-6 text-left my-auto\" onmouseover=\"\"\">";
+	$div .= "<h4 class=\"font-weight-bold h4-responsive\">" . queryData("title", $table, $id). "</h4>";
+	$div .= "<h6 class=\"grey-text\">" . queryData("subtitle", $table, $id) . "</h6>";
+	$div .= "<p>" . queryData("description", $table, $id) . "</p>";
+	$div .= "</div>";
+	return $div;
+}
+
 // Generate contact form fields
 function contactEntry($id) {
 	$table = "form";
