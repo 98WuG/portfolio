@@ -27,7 +27,7 @@ $blogContent = "<div class=\"col-lg-4 offset-lg-2 col-md-6 text-center mb-4\">"
 		. "</div>"
 	. "</div>"
 	. "<div id=\"blog-desc\" class=\"col-lg-4 col-md-6 text-left my-auto\" onmouseover=\"\"\">"
-		. "<h4 class=\"font-weight-bold text-primary h4-responsive\">Gerald Wu's Blog</h4>"
+		. "<h4 class=\"font-weight-bold h4-responsive\">Gerald Wu's Blog</h4>"
 		. "<h6 class=\"grey-text\">Musings of a Tech Enthusiast</h6>"
 		. "<p>Just another blog for technological tinkering. Focused on custom-built keyboards, hardware mods, Linux setups, and more.<br>I like spending hours to improve my workflow by seconds.</p>"
 	. "</div>";
@@ -152,7 +152,7 @@ $contact = sectionEntry(4, $contactContent, false);
 						<hr class="hr-light">
 						<!-- Description -->
 						<h4 class="white-text">Software Development / IT</h4>
-						<h6 class="white-text mb-4">Scala, Java, C++, Webdev / RHEL7</h6>
+						<h6 class="white-text mb-4">Java, Scala, C, Webdev / RHEL7</h6>
 						<button type="button" class="btn btn-outline-white readmore" href="#about">About Me</button>
 					</div>
 				</div>
