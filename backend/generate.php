@@ -53,6 +53,26 @@ function selfEntry($id) {
 	return $div;
 }
 
+function experienceEntry($id) {
+	$table = "experience";
+	$div = "<li>";
+	$div .= "<a href=\"" . queryData("link", $table, $id) . "\" class=\"company\">" . queryData("company", $table, $id) . "</a>";
+	$div .= "<p class=\"float-right date\">" . queryData("dates", $table, $id) . "</p>";
+	$div .= "<p class=\"position\">" . queryData("position", $table, $id) . "</p>";
+	$div .= "<p>" . queryData("description", $table, $id) . "</p>";
+	$div .= "</li>";
+	return $div;
+}
+
+function wrapExperience($content) {
+	$div = "<div class=\"col-lg-12 mx-auto text-left\">";
+	$div .= "<ul class=\"timeline\">";
+	$div .= $content;
+	$div .= "</ul>";
+	$div .= "</div>";
+	return $div;
+}
+
 // Generate contact form fields
 function contactEntry($id) {
 	$table = "form";

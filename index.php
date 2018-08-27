@@ -20,6 +20,14 @@ $selfContent = selfEntry(1);
 $selfContent .= selfEntry(2);
 $selfContent = sectionContent($selfContent);
 
+// Generate experience content
+$experienceContent = experienceEntry(1);
+$experienceContent .= experienceEntry(2);
+$experienceContent .= experienceEntry(3);
+$experienceContent .= experienceEntry(4);
+$experienceContent = wrapExperience($experienceContent);
+$experienceContent = sectionContent($experienceContent);
+
 // Generate contact form entries
 $contactContent = contactEntry(1);
 $contactContent .= contactEntry(2);
@@ -31,6 +39,7 @@ $aboutMe = sectionEntry(1, $aboutMeContent, true);
 $projects = sectionEntry(2, $projectContent, true);
 $self = sectionEntry(3, $selfContent, true);
 $contact = sectionEntry(4, $contactContent, false);
+$experience = sectionEntry(5, $experienceContent, true);
 
 ?>
 
@@ -97,6 +106,11 @@ $contact = sectionEntry(4, $contactContent, false);
 					</a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" href="#<?php echo queryData("htmlID", "sections", 5); ?>">
+						<?php echo ucfirst(queryData("htmlID", "sections", 5)); ?>
+					</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="#<?php echo queryData("htmlID", "sections", 2); ?>">
 						<?php echo ucfirst(queryData("htmlID", "sections", 2)); ?>
 					</a>
@@ -157,11 +171,11 @@ $contact = sectionEntry(4, $contactContent, false);
 
 		<?php
 			echo $aboutMe;
+			echo $experience;
 			echo $projects;
 			echo $self;
 			echo $contact;
 		?>
-
 
 	</div>
 

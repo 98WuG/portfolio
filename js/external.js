@@ -1,3 +1,4 @@
+// Make each entire entry in the self-hosted section a link
 $(document).ready(function() {
 	$(".self-desc").click(function() {
 		var link = $(this).parent().find('a').attr('href');
