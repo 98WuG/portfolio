@@ -10,9 +10,27 @@
 /*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `aboutme`
+--
+
+DROP TABLE IF EXISTS `aboutme`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `aboutme` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  `subtitle` varchar(100) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `icon` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `aboutme`
@@ -25,6 +43,24 @@ INSERT INTO `aboutme` VALUES (1,'Software Development','Java, Scala, C','I\'m a 
 UNLOCK TABLES;
 
 --
+-- Table structure for table `experience`
+--
+
+DROP TABLE IF EXISTS `experience`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `experience` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `link` varchar(100) DEFAULT NULL,
+  `company` varchar(100) DEFAULT NULL,
+  `dates` varchar(100) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `position` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `experience`
 --
 
@@ -33,6 +69,24 @@ LOCK TABLES `experience` WRITE;
 INSERT INTO `experience` VALUES (1,'https://fmsinc.com','FMS Inc.','May 2018 - Aug 2018','Researched, implemented, and optimized the Markov Clustering Algorithm in C# to identify clusters in relational graphs of size 100,000+ nodes and 120,000+ edges within 10 minutes. The clustering was implemented in the Sentinel Visualizer product, and allowed it to handle much larger graphs.<br>\r\nAlso implemented secure, PCI-compliant payment integration on the web using Authorize.Net in ASP Classic. It was a complete integration with the Authorize.Net payment gateway, including both one-time payments and long-term customer payment profiles.','Software Engineering Intern'),(2,'https://www.fairfaxcollegiate.com/','Fairfax Collegiate','Jun 2017 - Aug 2017','Summer enrichment program for elementary and middle school students. I taught classes focused around hardware/software development.','Teaching Assistant'),(3,'https://www.si.edu/','The Smithsonian Institution','Jun 2016 - Aug 2016','Created metadata extraction tool using Java and shell scripts. It read metadata from files in an ingest folder and populated an Oracle database with the data.\r\n\r\nCreated metadata ingestion tool using Java. It automatically processed spreadsheets within ingest folders and populate an Oracle database.','Software Engineering Intern'),(4,'https://www.si.edu/','The Smithsonian Institution','Jun 2015 - Aug 2015','Created a two-part data integrity program for the Smithsonian Digital Asset Management System. It integrated MD5 data and wrote to an Oracle database, and verified the data integrity at a later date.','Software Engineering Intern');
 /*!40000 ALTER TABLE `experience` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `form`
+--
+
+DROP TABLE IF EXISTS `form`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `form` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `htmlID` varchar(20) DEFAULT NULL,
+  `icon` varchar(20) DEFAULT NULL,
+  `type` varchar(20) DEFAULT NULL,
+  `field` varchar(20) DEFAULT NULL,
+  `label` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `form`
@@ -45,6 +99,26 @@ INSERT INTO `form` VALUES (1,'name','user','text','input','Name'),(2,'email','en
 UNLOCK TABLES;
 
 --
+-- Table structure for table `projects`
+--
+
+DROP TABLE IF EXISTS `projects`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `projects` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `lg` int(11) DEFAULT NULL,
+  `md` int(11) DEFAULT NULL,
+  `url` varchar(100) DEFAULT NULL,
+  `image` varchar(30) DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `subtitle` varchar(100) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `projects`
 --
 
@@ -55,6 +129,22 @@ INSERT INTO `projects` VALUES (1,4,12,'https://github.com/98WuG/QuantumEvolution
 UNLOCK TABLES;
 
 --
+-- Table structure for table `sections`
+--
+
+DROP TABLE IF EXISTS `sections`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sections` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `htmlID` varchar(20) DEFAULT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `subtitle` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `sections`
 --
 
@@ -63,6 +153,24 @@ LOCK TABLES `sections` WRITE;
 INSERT INTO `sections` VALUES (1,'about','Hi, I\'m Gerald!','Here\'s a little bit about me <i class=\"em em-smiley\"></i>'),(2,'projects','My Projects','Just a few projects I\'ve worked on. Click on any image to learn more.'),(3,'self-hosted','Self-hosted','I also run a few self-hosted things! Check them out below.'),(4,'contact','Contact Me','Let me know you\'re interested!'),(5,'experience','Experience','My experiences in the tech industry');
 /*!40000 ALTER TABLE `sections` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `self`
+--
+
+DROP TABLE IF EXISTS `self`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `self` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  `subtitle` varchar(100) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `picture` varchar(100) DEFAULT NULL,
+  `link` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `self`
@@ -77,9 +185,10 @@ UNLOCK TABLES;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-27 20:51:35
+-- Dump completed on 2018-08-27 21:03:45
