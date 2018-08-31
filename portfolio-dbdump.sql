@@ -57,7 +57,7 @@ CREATE TABLE `experience` (
   `description` text DEFAULT NULL,
   `position` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +66,7 @@ CREATE TABLE `experience` (
 
 LOCK TABLES `experience` WRITE;
 /*!40000 ALTER TABLE `experience` DISABLE KEYS */;
-INSERT INTO `experience` VALUES (1,'https://fmsinc.com','FMS Inc.','May 2018 - Aug 2018','Researched, implemented, and optimized the Markov Clustering Algorithm in C# to identify clusters in relational graphs of size 100,000+ nodes and 120,000+ edges within 10 minutes. The clustering was implemented in the Sentinel Visualizer product, and allowed it to handle much larger graphs.<br>\r\nAlso implemented secure, PCI-compliant payment integration on the web using Authorize.Net in ASP Classic. It was a complete integration with the Authorize.Net payment gateway, including both one-time payments and long-term customer payment profiles.','Software Engineering Intern'),(2,'https://www.fairfaxcollegiate.com/','Fairfax Collegiate','Jun 2017 - Aug 2017','Summer enrichment program for elementary and middle school students. I taught classes focused around hardware/software development.','Teaching Assistant'),(3,'https://www.si.edu/','The Smithsonian Institution','Jun 2016 - Aug 2016','Created metadata extraction tool using Java and shell scripts. It read metadata from files in an ingest folder and populated an Oracle database with the data.\r\n\r\nCreated metadata ingestion tool using Java. It automatically processed spreadsheets within ingest folders and populate an Oracle database.','Software Engineering Intern'),(4,'https://www.si.edu/','The Smithsonian Institution','Jun 2015 - Aug 2015','Created a two-part data integrity program for the Smithsonian Digital Asset Management System. It integrated MD5 data and wrote to an Oracle database, and verified the data integrity at a later date.','Software Engineering Intern');
+INSERT INTO `experience` VALUES (1,'https://www.si.edu/','The Smithsonian Institution','Jun 2015 - Aug 2015','Created a two-part data integrity program for the Smithsonian Digital Asset Management System. It integrated MD5 data and wrote to an Oracle database, and verified the data integrity at a later date.','Software Engineering Intern - Java'),(2,'https://www.si.edu/','The Smithsonian Institution','Jun 2016 - Aug 2016','Created metadata extraction tool using Java and shell scripts. It read metadata from files in an ingest folder and populated an Oracle database with the data.\r\n\r\nCreated metadata ingestion tool using Java. It automatically processed spreadsheets within ingest folders and populate an Oracle database.','Software Engineering Intern - Java'),(3,'https://www.fairfaxcollegiate.com/','Fairfax Collegiate','Jun 2017 - Aug 2017','Summer enrichment program for elementary and middle school students. I taught classes focused around hardware/software development.','Teaching Assistant'),(4,'https://fmsinc.com','FMS Inc.','May 2018 - Aug 2018','Researched, implemented, and optimized the Markov Clustering Algorithm in C# to identify clusters in relational graphs of size 100,000+ nodes and 120,000+ edges within 10 minutes. The clustering was implemented in the Sentinel Visualizer product, and allowed it to handle much larger graphs.<br>\r\nAlso implemented secure, PCI-compliant payment integration on the web using Authorize.Net in ASP Classic backend and JQuery/AJAX frontend. It was a complete integration with the Authorize.Net payment gateway, including both one-time payments and long-term customer payment profiles.','Software Engineering Intern - C#'),(5,'https://www.brown.edu/academics/applied-mathematics/','Brown University','Sep 2018 - PRESENT','Undergraduate teaching assistant for APMA 0340: Methods of Applied Mathematics II. This course covers both nonlinear ordinary differential equations and partial differential equations from an applied mathematics perspective.','Applied Mathematics Teaching Assistant');
 /*!40000 ALTER TABLE `experience` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -169,7 +169,7 @@ CREATE TABLE `self` (
   `picture` varchar(100) DEFAULT NULL,
   `link` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -178,7 +178,7 @@ CREATE TABLE `self` (
 
 LOCK TABLES `self` WRITE;
 /*!40000 ALTER TABLE `self` DISABLE KEYS */;
-INSERT INTO `self` VALUES (1,'Gerald Wu\'s Blog','Musings of a Tech Enthusiast','Just another blog for technological tinkering. Focused on custom-built keyboards, hardware mods, Linux setups, and more.<br>\r\nI like spending hours to improve my workflow by seconds.','images/blog.jpg','https://blog.geraldwu.com'),(2,'Git Server','Powered by Gitea','A little remote git server, running on this very same LAMP instance. Powered by Gitea. It\'s the main internet-connected remote I use for all my git repositories.','images/git.jpg','https://git.geraldwu.com/');
+INSERT INTO `self` VALUES (1,'Git Server','Powered by Gitea','A little remote git server, running on this very same LAMP instance. Powered by Gitea. It\'s the primary internet-connected remote I use for all my git repositories.','images/git.jpg','https://git.geraldwu.com/'),(2,'Gerald Wu\'s Blog','Musings of a Tech Enthusiast','Just another blog for technological tinkering. Focused on custom-built keyboards, hardware mods, Linux setups, and more.<br>\r\nI like spending hours to improve my workflow by seconds.','images/blog.jpg','https://blog.geraldwu.com');
 /*!40000 ALTER TABLE `self` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -191,4 +191,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-27 21:03:45
+-- Dump completed on 2018-08-31  2:37:55
