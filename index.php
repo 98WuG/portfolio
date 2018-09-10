@@ -155,7 +155,7 @@ $experience = sectionEntry(5, $experienceContent, true);
 						<!-- Description -->
 						<h4 class="white-text">Software Development / IT</h4>
 						<h6 class="white-text mb-4">Java, Scala, C, Webdev / RHEL7</h6>
-						<a role="button" class="btn btn-outline-white" href="/other/resume/gerald_wu_resume.pdf" target="_blank">Resume<i class="fa fa-download ml-2"></i></a>
+						<a role="button" class="btn btn-outline-white" href="https://git.geraldwu.com/98WuG/resume/raw/branch/master/gerald_wu_resume.pdf" target="_blank">Resume<i class="fa fa-download ml-2"></i></a>
 						<button type="button" class="btn btn-outline-white readmore" href="#about">About Me</button>
 					</div>
 				</div>
